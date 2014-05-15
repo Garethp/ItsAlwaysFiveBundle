@@ -1,6 +1,6 @@
 <?php
 
-namespace Garethp\ItsFiveBundle\DependencyInjection;
+namespace Garethp\ItsAlwaysFiveBundle\DependencyInjection;
 
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\Config\FileLocator;

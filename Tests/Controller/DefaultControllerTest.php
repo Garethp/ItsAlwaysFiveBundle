@@ -1,6 +1,6 @@
 <?php
 
-namespace Garethp\ItsFiveBundle\Tests\Controller;
+namespace Garethp\ItsAlwaysFiveBundle\Tests\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
 

@@ -1,6 +1,6 @@
 <?php
 
-namespace Garethp\ItsFiveBundle\DependencyInjection;
+namespace Garethp\ItsAlwaysFiveBundle\DependencyInjection;
 
 use Symfony\Component\Config\Definition\Builder\TreeBuilder;
 use Symfony\Component\Config\Definition\ConfigurationInterface;

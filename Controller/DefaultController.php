@@ -1,6 +1,6 @@
 <?php
 
-namespace Garethp\ItsFiveBundle\Controller;
+namespace Garethp\ItsAlwaysFiveBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 

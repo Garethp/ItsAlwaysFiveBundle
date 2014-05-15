@@ -1,5 +1,5 @@
 parameters:
-#    garethp_its_five.example.class: Garethp\ItsFiveBundle\Example
+#    garethp_its_five.example.class: Garethp\ItsAlwaysFiveBundle\Example
 
 services:
 #    garethp_its_five.example:

@@ -1,5 +1,5 @@
 {
-    "name": "garethp/its-five-bundle",
+    "name": "garethp/its-always-five-bundle",
     "description": "it's always five somewhere",
     "license": "MIT",
     "authors": [
@@ -12,9 +12,9 @@
 
     "autoload" : {
         "psr-0" : {
-            "Garethp\\ItsFiveBundle" : ""
+            "Garethp\\ItsAlwaysFiveBundle" : ""
         }
     },
 
-    "target-dir" : "Garethp/ItsFiveBundle"
+    "target-dir" : "Garethp/ItsAlwaysFiveBundle"
 }
