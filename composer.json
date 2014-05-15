@@ -1,0 +1,12 @@
+{
+    "name": "garethp/its-five-bundle",
+    "description": "it's always five somewhere",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Gareth Parker",
+            "email": "blackfireweb@gmail.com"
+        }
+    ],
+    "require": {}
+}
