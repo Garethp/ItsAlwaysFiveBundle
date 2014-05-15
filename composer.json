@@ -8,5 +8,13 @@
             "email": "blackfireweb@gmail.com"
         }
     ],
-    "require": {}
+    "require": {},
+
+    "autoload" : {
+        "psr-0" : {
+            "Garethp\\ItsFiveBundle" : ""
+        }
+    },
+
+    "target-dir" : "Garethp/ItsFiveBundle"
 }
