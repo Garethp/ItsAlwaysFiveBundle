@@ -1,0 +1,7 @@
+parameters:
+#    garethp_its_five.example.class: Garethp\ItsFiveBundle\Example
+
+services:
+#    garethp_its_five.example:
+#        class: %garethp_its_five.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]
