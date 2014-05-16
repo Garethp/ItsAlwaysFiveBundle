@@ -17,8 +17,17 @@ class DefaultController extends Controller
 			$hour = $dateTime->format('H');
 			if($hour == 17)
 			{
-				$location = $timezone->getLocation();
-				$location['name'] = $timezone->getName();
+				if(!isset($whereItsFive[$timezone->getLocation()['country_code']]))
+				{
+					$location = $timezone->getLocation();
+					$location['name'] = $timezone->getName();
+					$location['city'] = array();
+				}
+					else
+						$location = $whereItsFive[$timezone->getLocation()['country_code']];
+
+				$cityLocation = $timezone->getLocation();
+
 				$city = explode("/", $timezone->getName());
 				if(isset($city[1]))
 					$city = $city[1];
@@ -26,14 +35,31 @@ class DefaultController extends Controller
 					$city = $city[0];
 
 				$city = str_replace("_", " ", $city);
-				$location['city'] = $city;
+
 				$location['country'] = $this->country_code_to_country($timezone->getLocation()['country_code']);
 
-				if(isset($location['comments']))
-					$location['city'] = $location['comments'];
+				if(isset($cityLocation['comments']))
+					$city = $cityLocation['comments'];
 
-				$whereItsFive[] = $location;
+				if(strstr($city, "-"))
+				{
+					$city = explode(" - ", $city);
+					$city = array_pop($city);
+				}
+
+				if($city == "most locations")
+					$city = "";
+
+				if($city != $location['name'] && $city != "")
+					$location['city'][] = $city;
+
+				$whereItsFive[$location['country_code']] = $location;
 			}
+		}
+
+		foreach($whereItsFive as $k=>$location)
+		{
+			$whereItsFive[$k]['city'] = join(", ", $location['city']);
 		}
 
 		return $this->render('GarethpItsAlwaysFiveBundle:Default:index.html.twig', array('whereItsFive'=>$whereItsFive));

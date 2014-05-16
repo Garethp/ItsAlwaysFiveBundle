@@ -2,18 +2,24 @@
 
 {% block heading %}
 	{% if whereItsFive|length > 0 %}
-		It's Always Five PM
+		It's Always Five
 	{% else %}
-		It's (almost) Always Five PM
+		It's (almost) Always Five
 	{% endif %}
 {% endblock %}
 
 {% block content %}
 	{% if whereItsFive|length > 0 %}
-		It is currently 5PM in the following countries: <br />
+		It is currently 5PM in the following countries: <br /><br />
 		{% for location in whereItsFive %}
-			{{ location.country }} ({{ location.city }})<br />
+			{{ location.country }}
+			{% if location.city|length > 0 %}
+				({{ location.city }})
+			{% endif %}<br />
 		{% endfor %}
+	<br />
+
+	So it's never too early for a drink
 	{% else %}
 		Strangely enough it's not 5PM anywhere in the world. You should have a beer to celebrate this strange occurance
 	{% endif %}
