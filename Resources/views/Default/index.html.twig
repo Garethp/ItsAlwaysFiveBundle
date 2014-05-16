@@ -1,1 +1,20 @@
-Hello {{ name }}!
+{% extends "GarethpItsAlwaysFiveBundle::base.html.twig" %}
+
+{% block heading %}
+	{% if whereItsFive|length > 0 %}
+		It's Always Five PM
+	{% else %}
+		It's (almost) Always Five PM
+	{% endif %}
+{% endblock %}
+
+{% block content %}
+	{% if whereItsFive|length > 0 %}
+		It is currently 5PM in the following countries: <br />
+		{% for location in whereItsFive %}
+			{{ location.country }} ({{ location.city }})<br />
+		{% endfor %}
+	{% else %}
+		Strangely enough it's not 5PM anywhere in the world. You should have a beer to celebrate this strange occurance
+	{% endif %}
+{% endblock %}
